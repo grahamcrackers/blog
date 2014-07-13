@@ -3,10 +3,10 @@
   <channel>
     <title>Graham Rogers Blog</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
-    <link>www.grogers.me/</link>
-    <atom:link href="www.grogers.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 13 Jul 2014 00:23:43 -0500</pubDate>
-    <lastBuildDate>Sun, 13 Jul 2014 00:23:43 -0500</lastBuildDate>
+    <link>www.grogers.me/blog/</link>
+    <atom:link href="www.grogers.me/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 13 Jul 2014 00:48:58 -0500</pubDate>
+    <lastBuildDate>Sun, 13 Jul 2014 00:48:58 -0500</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
     
       <item>
@@ -26,8 +26,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 
 </description>
         <pubDate>Sat, 12 Jul 2014 12:57:13 -0500</pubDate>
-        <link>www.grogers.me/jekyll/update/2014/07/12/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">www.grogers.me/jekyll/update/2014/07/12/welcome-to-jekyll/</guid>
+        <link>www.grogers.me/blog/jekyll/update/2014/07/12/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">www.grogers.me/blog/jekyll/update/2014/07/12/welcome-to-jekyll/</guid>
         
         
         <category>jekyll</category>
@@ -41,8 +41,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
         <description>
 </description>
         <pubDate>Sat, 12 Jul 2014 12:57:13 -0500</pubDate>
-        <link>www.grogers.me/jekyll/update/2014/07/12/my-development-blog/</link>
-        <guid isPermaLink="true">www.grogers.me/jekyll/update/2014/07/12/my-development-blog/</guid>
+        <link>www.grogers.me/blog/jekyll/update/2014/07/12/my-development-blog/</link>
+        <guid isPermaLink="true">www.grogers.me/blog/jekyll/update/2014/07/12/my-development-blog/</guid>
         
         
         <category>jekyll</category>
