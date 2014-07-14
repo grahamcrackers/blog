@@ -4,10 +4,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>About</title>
+    <title>Code Snippets in Jekyll</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
-    <link rel="canonical" href="www.grogers.me/about/">
+    <link rel="canonical" href="www.grogers.me/jekyll/update/2014/07/12/code-snipets-in-jekyll/">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
@@ -37,8 +37,6 @@
       </a>
       <div class="trigger">
         
-          <a class="page-link" href="/about/">About</a>
-        
           
         
           
@@ -56,15 +54,59 @@
       <div class="post">
 
   <header class="post-header">
-    <h1>About</h1>
+    <h1>Code Snippets in Jekyll</h1>
+    <p class="meta">Jul 12, 2014</p>
   </header>
 
   <article class="post-content">
-  <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="http://jekyllrb.com/">jekyllrb.com</a></p>
+  <p>To start this off, this blog is based on <a href="http://jekyllrb.com">Jekyll</a> and I am learning the markdown syntax. And learning how to post code snippets of 
+certain languages. This was created as a Ruby snippet with the template that Jekyll creates when you first build out the site…</p>
 
-<p>You can find the source code for the Jekyll new theme at: <a href="https://github.com/jglovier/jekyll-new">github.com/jglovier/jekyll-new</a></p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">&quot;Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">&#39;Tom&#39;</span><span class="p">)</span>
+<span class="c1">#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.</span></code></pre></div>
 
-<p>You can find the source code for Jekyll at <a href="https://github.com/jekyll/jekyll">github.com/jekyll/jekyll</a></p>
+<p>by posting this in your markdown… </p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">{% highlight ruby %}
+def print_hi(name)
+  puts &quot;Hi, #{name}&quot;
+end
+print_hi(&#39;Tom&#39;)
+#=&gt; prints &#39;Hi, Tom&#39; to STDOUT.
+{% endhighlight %}</code></pre></div>
+
+<p>Now I guess I should explain that I just spent the last hour trying to figure out how to post that last code snippet and making it format with
+the liquid templating that jekyll uses. If you ever want to post about liquid templates you will have to surround the code in
+<code>{% raw %}</code> and <code>{% endraw %}</code> tags. AND THEN, I spent the next 30 minutes trying to find out how to 
+properly escape an <code>{% endraw %}</code> which I’ll just point you to the two blog posts I found that helped me.</p>
+
+<ul>
+  <li><a href="http://sarathlal.com/escape-liquid-tag-jekyll.html">Escape Liquid template tags in Jekyll posts</a></li>
+  <li><a href="http://blog.slaks.net/2013-06-10/jekyll-endraw-in-code/">Writing the endraw tag in Jekyll code blocks</a></li>
+</ul>
+
+<p>How about some JavaScript highlighting? It’s easy using the built in support for <a href="http://jekyllrb.com/docs/templates/#code-snippet-highlighting">Pygments</a> and liquid templating, you can
+just post this bit of code in:</p>
+
+<div class="highlight"><pre><code class="language-text" data-lang="text">{% highlight js %}
+var x = &#39;world&#39;;
+function hello(args){
+    console.log(&#39;Hello &#39; + args + &#39;!&#39;);
+};
+{% endhighlight %}</code></pre></div>
+
+<p>and out pops this prettified code on the other end:</p>
+
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="s1">&#39;world&#39;</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">hello</span><span class="p">(</span><span class="nx">args</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="nx">args</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span><span class="p">);</span>
+<span class="p">};</span></code></pre></div>
+
+<p>There are plenty of other languages that Pygments can highlight, so I suggest taking a look around on their documentation that I linked above.</p>
+
 
   </article>
 

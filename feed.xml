@@ -5,16 +5,14 @@
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
     <link>www.grogers.me/</link>
     <atom:link href="www.grogers.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 13 Jul 2014 09:26:09 -0500</pubDate>
-    <lastBuildDate>Sun, 13 Jul 2014 09:26:09 -0500</lastBuildDate>
+    <pubDate>Mon, 14 Jul 2014 12:45:08 -0500</pubDate>
+    <lastBuildDate>Mon, 14 Jul 2014 12:45:08 -0500</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
-To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+        <title>Code Snippets in Jekyll</title>
+        <description>&lt;p&gt;To start this off, this blog is based on &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and I am learning the markdown syntax. And learning how to post code snippets of 
+certain languages. This was created as a Ruby snippet with the template that Jekyll creates when you first build out the site…&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
@@ -22,12 +20,49 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;by posting this in your markdown… &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;{% highlight ruby %}
+def print_hi(name)
+  puts &amp;quot;Hi, #{name}&amp;quot;
+end
+print_hi(&amp;#39;Tom&amp;#39;)
+#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.
+{% endhighlight %}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Now I guess I should explain that I just spent the last hour trying to figure out how to post that last code snippet and making it format with
+the liquid templating that jekyll uses. If you ever want to post about liquid templates you will have to surround the code in
+&lt;code&gt;{% raw %}&lt;/code&gt; and &lt;code&gt;{% endraw %}&lt;/code&gt; tags. AND THEN, I spent the next 30 minutes trying to find out how to 
+properly escape an &lt;code&gt;{% endraw %}&lt;/code&gt; which I’ll just point you to the two blog posts I found that helped me.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sarathlal.com/escape-liquid-tag-jekyll.html&quot;&gt;Escape Liquid template tags in Jekyll posts&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.slaks.net/2013-06-10/jekyll-endraw-in-code/&quot;&gt;Writing the endraw tag in Jekyll code blocks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;How about some JavaScript highlighting? It’s easy using the built in support for &lt;a href=&quot;http://jekyllrb.com/docs/templates/#code-snippet-highlighting&quot;&gt;Pygments&lt;/a&gt; and liquid templating, you can
+just post this bit of code in:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;{% highlight js %}
+var x = &amp;#39;world&amp;#39;;
+function hello(args){
+    console.log(&amp;#39;Hello &amp;#39; + args + &amp;#39;!&amp;#39;);
+};
+{% endhighlight %}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;and out pops this prettified code on the other end:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;world&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;hello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Hello &amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;!&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;There are plenty of other languages that Pygments can highlight, so I suggest taking a look around on their documentation that I linked above.&lt;/p&gt;
 
 </description>
-        <pubDate>Sat, 12 Jul 2014 12:57:13 -0500</pubDate>
-        <link>www.grogers.me/jekyll/update/2014/07/12/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">www.grogers.me/jekyll/update/2014/07/12/welcome-to-jekyll/</guid>
+        <pubDate>Sat, 12 Jul 2014 16:14:00 -0500</pubDate>
+        <link>www.grogers.me/jekyll/update/2014/07/12/code-snipets-in-jekyll/</link>
+        <guid isPermaLink="true">www.grogers.me/jekyll/update/2014/07/12/code-snipets-in-jekyll/</guid>
         
         
         <category>jekyll</category>
@@ -37,12 +72,19 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
       </item>
     
       <item>
-        <title>My Development Blog</title>
-        <description>
+        <title>My New Blog!</title>
+        <description>&lt;h2 id=&quot;hi&quot;&gt;Hi.&lt;/h2&gt;
+&lt;p&gt;My name is Graham. I am starting this blog to start documenting anything I find relevant to my development learning process.
+Currently, my main interest for expanding my development skills are focused on &lt;a href=&quot;http://nodejs.org/&quot;&gt;NodeJS&lt;/a&gt; and &lt;a href=&quot;https://angularjs.org/&quot;&gt;AngularJS&lt;/a&gt;,
+and anything I find intriguing I tend to post here; Code snipets, other helpful posts from other blogs, anything and everything. &lt;/p&gt;
+
+&lt;p&gt;I am also a big proponent of open source technology, so anything I post on my blog, you should be able to recreate with (relative) ease, 
+and hopefully if my experiences have helped even one person, I will be 100% happy.&lt;/p&gt;
+
 </description>
-        <pubDate>Sat, 12 Jul 2014 12:57:13 -0500</pubDate>
-        <link>www.grogers.me/jekyll/update/2014/07/12/my-development-blog/</link>
-        <guid isPermaLink="true">www.grogers.me/jekyll/update/2014/07/12/my-development-blog/</guid>
+        <pubDate>Sat, 12 Jul 2014 16:00:00 -0500</pubDate>
+        <link>www.grogers.me/jekyll/update/2014/07/12/my-new-blog/</link>
+        <guid isPermaLink="true">www.grogers.me/jekyll/update/2014/07/12/my-new-blog/</guid>
         
         
         <category>jekyll</category>
