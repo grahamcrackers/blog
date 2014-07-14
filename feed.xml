@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Graham Rogers Blog</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
+    <description>A blog by Graham Rogers to document any and all development learning.</description>
     <link>www.grogers.me/</link>
     <atom:link href="www.grogers.me/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 14 Jul 2014 12:47:02 -0500</pubDate>
-    <lastBuildDate>Mon, 14 Jul 2014 12:47:02 -0500</lastBuildDate>
+    <pubDate>Mon, 14 Jul 2014 13:12:35 -0500</pubDate>
+    <lastBuildDate>Mon, 14 Jul 2014 13:12:35 -0500</lastBuildDate>
     <generator>Jekyll v2.1.1</generator>
     
       <item>
